@@ -31,14 +31,7 @@ throws IOException, InterruptedException {
 	    sum+=sum1;
 	}
 	if(flag==false){
-		String line = Key.toString();
-		
-		String b = line.substring(0, line.length()-1);
-		String b1 = line.substring(1, line.length());
-		String key1 = b + " has mutual friend " + b1;
-		Text finalkey = new Text(key1);
-		IntWritable sumi = new IntWritable(sum);
-		context.write(finalkey, sumi);
+		context.write(Key,new IntWritable(sum));
 		}
 	}
 	
