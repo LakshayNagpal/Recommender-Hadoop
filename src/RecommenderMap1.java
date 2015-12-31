@@ -21,15 +21,24 @@ throws IOException, InterruptedException{
 	
 	String line = value.toString();
 	StringTokenizer itr = new StringTokenizer(line);
-	String array[] = new String[50];
-	int size = 0;
+	boolean flag = false;
+	String s1 = "";
+	String s2 = "";
 	  while(itr.hasMoreTokens()){
 		  word.set(itr.nextToken());
-		  String next = word.toString();
-		  array[size++] = next;
+		  if(flag == false){
+			  s1 = word.toString();
+			  flag = true;
+		  }
+		  else{
+			  s2 = word.toString();
+		  }
 	  	}
-	  String out = array[0];
-	  String out1 = array[2] + array[1];
-	  context.write(new Text(out), new Text(out1));
+	  String s3 = "";
+	  s3 = s3 + s1.charAt(0);
+	  
+	  String s4 = "";
+	  s4 = s4 + s2 + s1.charAt(1);
+	  context.write(new Text(s3), new Text(s4));
 	}
 }

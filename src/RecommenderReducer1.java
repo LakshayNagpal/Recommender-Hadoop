@@ -24,7 +24,7 @@ throws IOException, InterruptedException {
 	}
 	
 	for(int i=0;i<size;++i){
-		
+		arr1[i] = arr2[i] = "";
 		arr1[i] = arr[i].substring(0, arr[i].length()-1);
 		arr2[i] = arr[i].substring(arr[i].length()-1, arr[i].length());
 	}
@@ -34,7 +34,6 @@ throws IOException, InterruptedException {
 	}
 	
 	for(int i=0;i<size-1;++i){
-		
 		max = arr3[i];
 		for(int j=i+1;j<size;++j){
 			if(arr3[j]>max){
