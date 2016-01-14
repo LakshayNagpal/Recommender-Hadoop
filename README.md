@@ -1,7 +1,7 @@
 # Recommender-Hadoop
 Writing scalable recommender system with Hadoop. Implementation of very simple "people we might know" recommender algorithm on Apache Hadoop
 
-### Our first try on making **People you might know** feature of facebook on Apache Hadoop and sorting the recommended friends based on the number of mutual friends they have.*(From highest to lowest)*
+Our first try on making **People you might know** feature of facebook on Apache Hadoop and sorting the recommended friends based on the number of mutual friends they have.*(From highest to lowest)*
 
 ####Our graph contains the input file with the first character of every line as source and the following characters as their neighbors connecting them.
 
